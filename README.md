@@ -61,12 +61,6 @@ This project aims to **predict customer churn** in a bank using an **optimized A
 
 ---
 
-### 6. Example Prediction
-- Predict churn for a sample customer using an adjusted threshold (`threshold = 0.6`).
-
-
----
-
 ## 📊 Results
 
 ### 🔹 Confusion Matrix
