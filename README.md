@@ -22,8 +22,6 @@ This project aims to **predict customer churn** in a bank using an **optimized A
   - `scikit-learn`  
   - `keras` / `tensorflow`  
 
-```bash
-pip install numpy pandas matplotlib scikit-learn keras tensorflow
 📝 Code Description
 Data Loading and Preparation
 
@@ -63,11 +61,11 @@ Predict a sample customer using an adjusted threshold (threshold = 0.6) for chur
 
 📊 Results
 Confusion Matrix
-
+![Confusion Matrix](images/confusion_matrix.png)
 Accuracy Curve
-
+![Accuracy Curve](images/accuracy_curve.png)
 Loss Curve
-
+![Loss Curve](images/loss_curve.png)
 
 📈 Conclusion
 The optimized ANN predicts churn effectively with good overall accuracy.
