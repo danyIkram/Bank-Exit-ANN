@@ -24,64 +24,67 @@ This project aims to **predict customer churn** in a bank using an **optimized A
     
 ---
 
-📝 Code Overview
-1. Data Loading and Preparation
+## 📝 Code Overview
 
-Load dataset and inspect for missing values.
-
-Encode categorical columns (Geography, Gender) using LabelEncoder.
-
-Split data into train/test sets (80/20).
-
-Apply feature scaling with StandardScaler.
-
-2. Handling Class Imbalance
-
-Compute class_weights to handle the smaller number of churned customers.
-
-3. Building the ANN
-
-Architecture: 3 hidden layers with ReLU activation and he_uniform initializer.
-
-Regularization: Dropout of 0.2 to prevent overfitting.
-
-Output Layer: Sigmoid activation for binary classification.
-
-Optimizer: Adam
-
-Loss Function: Binary cross-entropy
-
-4. Training
-
-Early stopping on validation loss (patience=10).
-
-Batch size: 16
-
-Epochs: 100 (or until early stopping triggers)
-
-5. Evaluation
-
-Metrics: Accuracy, classification report, confusion matrix.
-
-Visualization: Plot accuracy and loss curves.
-
-6. Example Prediction
-
-Predict churn for a sample customer using an adjusted threshold (threshold = 0.6).
+### 1. Data Loading and Preparation
+- Load dataset and inspect for missing values.  
+- Encode categorical columns (`Geography`, `Gender`) using `LabelEncoder`.  
+- Split data into **train/test sets (80/20)**.  
+- Apply **feature scaling** using `StandardScaler`.
 
 ---
 
-📊 Results
-
-Confusion Matrix ![Confusion Matrix](images/confusion_matrix.png)
-
-Accuracy Curve ![Accuracy Curve](images/accuracy_curve.png)
-
-Loss Curve ![Loss Curve](images/loss_curve.png)
+### 2. Handling Class Imbalance
+- Compute **class weights** to handle the smaller number of churned customers.
 
 ---
 
-📈 Conclusion
+### 3. Building the ANN
+- **Architecture:** 3 hidden layers with `ReLU` activation and `he_uniform` initializer.  
+- **Regularization:** Dropout of 0.2 to prevent overfitting.  
+- **Output Layer:** Sigmoid activation for binary classification.  
+- **Optimizer:** Adam  
+- **Loss Function:** Binary cross-entropy  
+
+---
+
+### 4. Training
+- **EarlyStopping** on validation loss (`patience = 10`).  
+- **Batch size:** 16  
+- **Epochs:** 100 (or until early stopping triggers)
+
+---
+
+### 5. Evaluation
+- **Metrics:** Accuracy, classification report, confusion matrix.  
+- **Visualization:** Plot accuracy and loss curves.
+
+---
+
+### 6. Example Prediction
+- Predict churn for a sample customer using an adjusted threshold (`threshold = 0.6`).
+
+
+---
+
+## 📊 Results
+
+### 🔹 Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
+
+---
+
+### 🔹 Accuracy Curve
+![Accuracy Curve](images/accuracy_curve.png)
+
+---
+
+### 🔹 Loss Curve
+![Loss Curve](images/loss_curve.png)
+
+---
+
+## 📈 Conclusion
 
 The optimized ANN predicts churn effectively with good overall accuracy.
 
