@@ -84,8 +84,6 @@ The optimized ANN predicts churn effectively with good overall accuracy.
 
 Using class_weights and adjusting the threshold improves detection of at-risk customers.
 
-This notebook can serve as a foundation for supervised machine learning projects on banking data.
-
 ---
 
 🔗 Dataset
