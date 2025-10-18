@@ -20,59 +20,76 @@ This project aims to **predict customer churn** in a bank using an **optimized A
   - `pandas`  
   - `matplotlib`  
   - `scikit-learn`  
-  - `keras` / `tensorflow`  
+  - `keras` / `tensorflow`
+    
+---
 
-📝 Code Description
-Data Loading and Preparation
+📝 Code Overview
+1. Data Loading and Preparation
 
-Encoding categorical columns (Geography, Gender) using LabelEncoder.
+Load dataset and inspect for missing values.
 
-Train/test split (80/20) and feature scaling with StandardScaler.
+Encode categorical columns (Geography, Gender) using LabelEncoder.
 
-Handling Class Imbalance
+Split data into train/test sets (80/20).
 
-Compute class_weights to compensate for the lower number of churned customers.
+Apply feature scaling with StandardScaler.
 
-Building the ANN
+2. Handling Class Imbalance
 
-3 hidden layers with ReLU activation and he_uniform initializer.
+Compute class_weights to handle the smaller number of churned customers.
 
-Dropout of 0.2 to prevent overfitting.
+3. Building the ANN
 
-Output layer with sigmoid activation for binary prediction.
+Architecture: 3 hidden layers with ReLU activation and he_uniform initializer.
 
-Optimizer: adam, Loss: binary_crossentropy.
+Regularization: Dropout of 0.2 to prevent overfitting.
 
-Training
+Output Layer: Sigmoid activation for binary classification.
 
-EarlyStopping on val_loss with patience = 10.
+Optimizer: Adam
 
-Batch size = 16.
+Loss Function: Binary cross-entropy
 
-Evaluation
+4. Training
 
-Classification report and confusion matrix.
+Early stopping on validation loss (patience=10).
 
-Visualize accuracy and loss curves.
+Batch size: 16
 
-Example Prediction
+Epochs: 100 (or until early stopping triggers)
 
-Predict a sample customer using an adjusted threshold (threshold = 0.6) for churn.
+5. Evaluation
+
+Metrics: Accuracy, classification report, confusion matrix.
+
+Visualization: Plot accuracy and loss curves.
+
+6. Example Prediction
+
+Predict churn for a sample customer using an adjusted threshold (threshold = 0.6).
+
+---
 
 📊 Results
-Confusion Matrix
-![Confusion Matrix](images/confusion_matrix.png)
-Accuracy Curve
-![Accuracy Curve](images/accuracy_curve.png)
-Loss Curve
-![Loss Curve](images/loss_curve.png)
+
+Confusion Matrix ![Confusion Matrix](images/confusion_matrix.png)
+
+Accuracy Curve ![Accuracy Curve](images/accuracy_curve.png)
+
+Loss Curve ![Loss Curve](images/loss_curve.png)
+
+---
 
 📈 Conclusion
+
 The optimized ANN predicts churn effectively with good overall accuracy.
 
 Using class_weights and adjusting the threshold improves detection of at-risk customers.
 
 This notebook can serve as a foundation for supervised machine learning projects on banking data.
+
+---
 
 🔗 Dataset
 Churn Modelling Dataset on Kaggle
